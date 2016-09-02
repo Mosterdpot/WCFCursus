@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BierenServiceLibrary", "BierenServiceLibrary\BierenServiceLibrary.csproj", "{74F0E928-3E97-4413-9516-3D11C1D48825}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBierenServiceHost", "ConsoleBierenServiceHost\ConsoleBierenServiceHost.csproj", "{3FFD34D9-ECB3-4FB9-B84A-CB4E9DEDAAFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{74F0E928-3E97-4413-9516-3D11C1D48825}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74F0E928-3E97-4413-9516-3D11C1D48825}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74F0E928-3E97-4413-9516-3D11C1D48825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FFD34D9-ECB3-4FB9-B84A-CB4E9DEDAAFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FFD34D9-ECB3-4FB9-B84A-CB4E9DEDAAFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FFD34D9-ECB3-4FB9-B84A-CB4E9DEDAAFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FFD34D9-ECB3-4FB9-B84A-CB4E9DEDAAFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
