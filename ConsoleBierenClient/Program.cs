@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleBierenClient.BierenServiceReference;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,30 @@ namespace ConsoleBierenClient
     {
         static void Main(string[] args)
         {
+            using (var bierenServiceClient = new BierenServiceClient("httpBieren"))
+            {
+                Console.WriteLine("Aantal bieren: {0}",
+                bierenServiceClient.GetTotaalAantalBieren());
+                Console.Write("Van alcohol:");
+                var van = Decimal.Parse(Console.ReadLine());
+                Console.Write("Tot alcohol:");
+                var tot = Decimal.Parse(Console.ReadLine());
+                Console.WriteLine("Aantal bieren: {0}",
+                bierenServiceClient.GetAantalBierenTussenAlcohol(van, tot));
+                Console.Write("Woord:");
+                var woord = Console.ReadLine();
+                var bieren = bierenServiceClient.GetBierenMetWoord(woord);
+                foreach (var bier in bieren)
+                {
+                    Console.WriteLine("{0} {1} {2}%", bier.BierNr, bier.Naam, bier.Alcohol);
+                }
+                Console.WriteLine();
+                foreach (var bier in bierenServiceClient.GetStrafsteBieren())
+                {
+                    Console.WriteLine("{0} {1} {2}%", bier.BierNr, bier.Naam, bier.Alcohol);
+                }
+                Console.ReadLine();
+            }
         }
     }
 }

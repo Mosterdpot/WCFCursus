@@ -34,5 +34,12 @@ namespace BierenServiceLibrary
                                        where bier.Naam.ToLower().Contains(woordInKleineLetters)
                                        select bier).ToList();
         }
+
+        public List<Bier> GetStrafsteBieren()
+        {
+            return (from bier in bieren
+                    where bier.Alcohol == bieren.Max(eenBier => eenBier.Alcohol)
+                    select bier).ToList();
+        }
     }
 }

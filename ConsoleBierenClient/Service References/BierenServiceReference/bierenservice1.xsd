@@ -42,4 +42,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetStrafsteBieren">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStrafsteBierenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BierenServiceLibrary" minOccurs="0" name="GetStrafsteBierenResult" nillable="true" type="q2:ArrayOfBier" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
