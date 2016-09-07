@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3830a489-cf17-4cf4-b2dc-156edd0c53ad" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/BierenServiceHost/EtikettenService.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="etikettenservice.wsdl" MetadataType="Wsdl" ID="8508c6f6-83c3-4034-bb77-d54b72072b47" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/EtikettenService.svc/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f4faea4f-b9a6-4e0c-be88-324ec5433914" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/EtikettenService.svc/mex" />
+    <MetadataFile FileName="etikettenservice.xsd" MetadataType="Schema" ID="2b79ebc3-249e-4cae-ad81-308e5b91bfad" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/EtikettenService.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f088de45-c20a-46bc-b9de-03188088ccec" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/EtikettenService.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

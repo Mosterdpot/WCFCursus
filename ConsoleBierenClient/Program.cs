@@ -1,8 +1,10 @@
 ﻿using ConsoleBierenClient.BierenServiceReference;
+using ConsoleBierenClient.EtikettenServiceReference;
 using ConsoleBierenClient.RadenServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,9 +14,41 @@ namespace ConsoleBierenClient
     {
         static void Main(string[] args)
         {
-            ToonRadenScherm();
+            //ToonRadenScherm();
             //ToonBierenScherm();
-            
+            //ToonEtikettenScherm();
+            ToonEtikettenMetCallbackScherm();
+
+        }
+
+        private static void ToonEtikettenMetCallbackScherm()
+        {
+            var etikettenServiceCallBack = new EtikettenServiceCallBack(); (
+            using (var etikettenServiceClient = new EtikettenServiceClient(
+            new InstanceContext(etikettenServiceCallBack))) 
+            {
+            etikettenServiceClient.VerwittigAlsEtikettenVerwijderdZijn(); 
+            Console.Write("Datum tijd (druk s om te stoppen):");
+            var antwoord = Console.ReadLine();
+            while (antwoord != "s")
+            {
+            var datum = DateTime.Parse(antwoord);
+            etikettenServiceClient.VerwijderEtikettenOuderDan(datum);
+            Console.Write("Datum tijd (druk s om te stoppen):");
+            antwoord = Console.ReadLine();
+            }
+            etikettenServiceClient.StopVerwittigenAlsEtikettenVerwijderdZijn(); 
+            }
+        }
+
+        private static void ToonEtikettenScherm()
+        {
+            using (var etikettenServiceClient = new EtikettenServiceClient())
+            {
+                Console.Write("Datum tijd:");
+                var datum = DateTime.Parse(Console.ReadLine());
+                etikettenServiceClient.VerwijderEtikettenOuderDan(datum);
+            }
         }
 
         private static void ToonBierenScherm()
@@ -41,12 +75,12 @@ namespace ConsoleBierenClient
                 {
                     Console.WriteLine("{0} {1} {2}%", bier.BierNr, bier.Naam, bier.Alcohol);
                 }
-                
+
             }
             Console.ReadLine();
         }
 
-        private static void ToonRadenScherm() 
+        private static void ToonRadenScherm()
         {
             using (var radenServiceClient = new RadenServiceClient())
             {
@@ -60,7 +94,7 @@ namespace ConsoleBierenClient
                     antwoord = radenServiceClient.RaadDuvelAlcohol(alcohol);
                 }
                 Console.WriteLine("{0}, {1} beurt(en)", antwoord.Hint, antwoord.Beurten);
-                                
+
                 Console.WriteLine("Beste score:{0}", antwoord.BesteScore);
             }
             Console.ReadLine();

@@ -44,9 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EtikettenServiceCallBack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\BierenServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EtikettenServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -73,6 +79,14 @@
     <None Include="Service References\BierenServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\EtikettenServiceReference\etikettenservice.wsdl" />
+    <None Include="Service References\EtikettenServiceReference\etikettenservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EtikettenServiceReference\service.wsdl" />
+    <None Include="Service References\EtikettenServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\RadenServiceReference\alcoholradenservice1.wsdl" />
     <None Include="Service References\RadenServiceReference\alcoholradenservice1.xsd">
       <SubType>Designer</SubType>
@@ -93,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\BierenServiceReference\" />
+    <WCFMetadataStorage Include="Service References\EtikettenServiceReference\" />
     <WCFMetadataStorage Include="Service References\RadenServiceReference\" />
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +130,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\RadenServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EtikettenServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EtikettenServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EtikettenServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
