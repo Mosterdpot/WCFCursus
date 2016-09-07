@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace BierenServiceLibrary
 {
+    
+
     [ServiceContract(Namespace="http://vdab.be/bierenservice")]
     public interface IBierenService
     {

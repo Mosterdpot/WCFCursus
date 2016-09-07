@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1c1df775-7569-43e4-b329-56ba8074614d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/BierenServiceHost/RadenService.svc/mex/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="alcoholradenservice.wsdl" MetadataType="Wsdl" ID="011de431-fde8-49fe-94ee-cca353e6f366" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/RadenService.svc/mex/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="a767916f-d1e9-4953-952a-bd99a685e933" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/RadenService.svc/mex/mex" />
+    <MetadataFile FileName="alcoholradenservice.xsd" MetadataType="Schema" ID="14676a40-df34-4bdb-8005-0d8ea34cfe82" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/RadenService.svc/mex/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="6b687a06-aa85-4ddf-9dbf-d8629cfd34dd" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/RadenService.svc/mex/mex" />
+    <MetadataFile FileName="BierenServiceLibrary.xsd" MetadataType="Schema" ID="6e6e38ee-2e9a-4020-8bbe-95cd15b3cb32" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/RadenService.svc/mex/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

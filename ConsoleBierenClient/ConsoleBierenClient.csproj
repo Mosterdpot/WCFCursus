@@ -51,6 +51,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\RadenServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -68,12 +73,27 @@
     <None Include="Service References\BierenServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\RadenServiceReference\alcoholradenservice.wsdl" />
+    <None Include="Service References\RadenServiceReference\alcoholradenservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RadenServiceReference\BierenServiceLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RadenServiceReference\ConsoleBierenClient.RadenServiceReference.RaadResultaat.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\RadenServiceReference\service.wsdl" />
+    <None Include="Service References\RadenServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\BierenServiceReference\" />
+    <WCFMetadataStorage Include="Service References\RadenServiceReference\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\BierenServiceReference\configuration91.svcinfo" />
@@ -83,6 +103,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\BierenServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RadenServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RadenServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RadenServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

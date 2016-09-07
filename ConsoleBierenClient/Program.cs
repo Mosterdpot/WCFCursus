@@ -1,4 +1,5 @@
 ﻿using ConsoleBierenClient.BierenServiceReference;
+using ConsoleBierenClient.RadenServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,13 @@ namespace ConsoleBierenClient
     class Program
     {
         static void Main(string[] args)
+        {
+            ToonRadenScherm();
+            //ToonBierenScherm();
+            
+        }
+
+        private static void ToonBierenScherm()
         {
             using (var bierenServiceClient = new BierenServiceClient("httpBieren"))
             {
@@ -34,6 +42,23 @@ namespace ConsoleBierenClient
                     Console.WriteLine("{0} {1} {2}%", bier.BierNr, bier.Naam, bier.Alcohol);
                 }
                 Console.ReadLine();
+            }
+        }
+
+        private static void ToonRadenScherm() 
+        {
+            using (var radenServiceClient = new RadenServiceClient())
+            {
+                Console.WriteLine("Raad het alcohol% van Duvel");
+                var alcohol = Decimal.Parse(Console.ReadLine());
+                var antwoord = radenServiceClient.RaadDuvelAlcohol(alcohol);
+                while (antwoord.Hint != Hint.Correct)
+                {
+                    Console.WriteLine("{0}, {1} beurt(en)", antwoord.Hint, antwoord.Beurten);
+                    alcohol = Decimal.Parse(Console.ReadLine());
+                    antwoord = radenServiceClient.RaadDuvelAlcohol(alcohol);
+                }
+                Console.WriteLine("{0}, {1} beurt(en)", antwoord.Hint, antwoord.Beurten);
             }
         }
     }

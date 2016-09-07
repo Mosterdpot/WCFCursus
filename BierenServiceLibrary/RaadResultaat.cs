@@ -7,15 +7,19 @@ using System.Threading.Tasks;
 
 namespace BierenServiceLibrary
 {
+    public enum Hint
+    {
+        Hoger, Lager, Correct
+    }
 
     [DataContract]
-    public class Bier
+    public class RaadResultaat
     {
         [DataMember]
-        public int BierNr { get; set; }
+        public Hint Hint { get; set; }
         [DataMember]
-        public string Naam { get; set; }
-        [DataMember]
-        public decimal Alcohol { get; set; }
+        public int Beurten { get; set; }
+
+        public int BesteScore { get; set; }
     }
 }
