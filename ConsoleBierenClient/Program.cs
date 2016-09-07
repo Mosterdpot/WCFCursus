@@ -41,8 +41,9 @@ namespace ConsoleBierenClient
                 {
                     Console.WriteLine("{0} {1} {2}%", bier.BierNr, bier.Naam, bier.Alcohol);
                 }
-                Console.ReadLine();
+                
             }
+            Console.ReadLine();
         }
 
         private static void ToonRadenScherm() 
@@ -59,7 +60,10 @@ namespace ConsoleBierenClient
                     antwoord = radenServiceClient.RaadDuvelAlcohol(alcohol);
                 }
                 Console.WriteLine("{0}, {1} beurt(en)", antwoord.Hint, antwoord.Beurten);
+                                
+                Console.WriteLine("Beste score:{0}", antwoord.BesteScore);
             }
+            Console.ReadLine();
         }
     }
 }

@@ -23,6 +23,9 @@ namespace ConsoleBierenClient.RadenServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int BesteScoreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int BeurtenField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -35,6 +38,19 @@ namespace ConsoleBierenClient.RadenServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int BesteScore {
+            get {
+                return this.BesteScoreField;
+            }
+            set {
+                if ((this.BesteScoreField.Equals(value) != true)) {
+                    this.BesteScoreField = value;
+                    this.RaisePropertyChanged("BesteScore");
+                }
             }
         }
         

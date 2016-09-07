@@ -19,7 +19,7 @@ namespace BierenServiceLibrary
         public Hint Hint { get; set; }
         [DataMember]
         public int Beurten { get; set; }
-
+        [DataMember]
         public int BesteScore { get; set; }
     }
 }

@@ -73,18 +73,18 @@
     <None Include="Service References\BierenServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\RadenServiceReference\alcoholradenservice.wsdl" />
-    <None Include="Service References\RadenServiceReference\alcoholradenservice.xsd">
+    <None Include="Service References\RadenServiceReference\alcoholradenservice1.wsdl" />
+    <None Include="Service References\RadenServiceReference\alcoholradenservice1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\RadenServiceReference\BierenServiceLibrary.xsd">
+    <None Include="Service References\RadenServiceReference\BierenServiceLibrary1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\RadenServiceReference\ConsoleBierenClient.RadenServiceReference.RaadResultaat.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\RadenServiceReference\service.wsdl" />
-    <None Include="Service References\RadenServiceReference\service.xsd">
+    <None Include="Service References\RadenServiceReference\service1.wsdl" />
+    <None Include="Service References\RadenServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
