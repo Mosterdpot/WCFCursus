@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost/BierenServiceHost/BierenService.svc/mex/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost/BierenServiceHost/BierenService.svc/mex/mex/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="bierenservice1.wsdl" MetadataType="Wsdl" ID="f16a1be7-0513-450f-be3d-4db3fae32cbd" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/BierenService.svc/mex/mex" />
-    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="95660b85-6cfc-4fa5-9cfa-5ea31bbac131" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/BierenService.svc/mex/mex" />
-    <MetadataFile FileName="bierenservice1.xsd" MetadataType="Schema" ID="b08fee63-7e68-4b65-a66e-43fc2fcb8e22" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/BierenService.svc/mex/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="5c3337e7-e098-47bc-b986-074bb2ba2527" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/BierenService.svc/mex/mex" />
-    <MetadataFile FileName="BierenServiceLibrary1.xsd" MetadataType="Schema" ID="9ef70b0b-91a1-4b7c-aead-a00332b0fad6" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/BierenService.svc/mex/mex" />
+    <MetadataFile FileName="bierenservice.wsdl" MetadataType="Wsdl" ID="380183a8-0b37-4afe-adee-4005f26d2ed4" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/BierenService.svc/mex/mex/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="0c1afeba-e605-4bdb-b1a7-cbd1b5011d10" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/BierenService.svc/mex/mex/mex" />
+    <MetadataFile FileName="bierenservice.xsd" MetadataType="Schema" ID="48e03116-4a13-450a-9186-7a2dda068d4b" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/BierenService.svc/mex/mex/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="dce5e16a-125e-4295-b8b1-697ccb3751cc" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/BierenService.svc/mex/mex/mex" />
+    <MetadataFile FileName="BierenServiceLibrary.xsd" MetadataType="Schema" ID="fd00591a-eb2b-4b8b-a985-67cf9d358ad5" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/BierenService.svc/mex/mex/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
