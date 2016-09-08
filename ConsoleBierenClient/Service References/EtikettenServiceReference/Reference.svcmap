@@ -26,6 +26,7 @@
     <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f4faea4f-b9a6-4e0c-be88-324ec5433914" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/EtikettenService.svc/mex" />
     <MetadataFile FileName="etikettenservice.xsd" MetadataType="Schema" ID="2b79ebc3-249e-4cae-ad81-308e5b91bfad" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/EtikettenService.svc/mex" />
     <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f088de45-c20a-46bc-b9de-03188088ccec" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/EtikettenService.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="ee742e1a-11f8-4973-ac55-ac82fedd56e1" SourceId="1" SourceUrl="http://localhost/BierenServiceHost/EtikettenService.svc/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

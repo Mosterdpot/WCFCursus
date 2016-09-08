@@ -22,7 +22,7 @@ namespace BierenServiceLibrary
     //}
 
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
-    class EtikettenService : IEtikettenService
+    public class EtikettenService : IEtikettenService
     {
         private List<IEtikettenServiceCallBack> callBackChannels = new List<IEtikettenServiceCallBack>();
         public void VerwittigAlsEtikettenVerwijderdZijn()

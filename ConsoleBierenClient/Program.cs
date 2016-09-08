@@ -23,32 +23,32 @@ namespace ConsoleBierenClient
 
         private static void ToonEtikettenMetCallbackScherm()
         {
-            var etikettenServiceCallBack = new EtikettenServiceCallBack(); (
+            var etikettenServiceCallBack = new EtikettenServiceCallBack();
             using (var etikettenServiceClient = new EtikettenServiceClient(
-            new InstanceContext(etikettenServiceCallBack))) 
+            new InstanceContext(etikettenServiceCallBack)))
             {
-            etikettenServiceClient.VerwittigAlsEtikettenVerwijderdZijn(); 
-            Console.Write("Datum tijd (druk s om te stoppen):");
-            var antwoord = Console.ReadLine();
-            while (antwoord != "s")
-            {
-            var datum = DateTime.Parse(antwoord);
-            etikettenServiceClient.VerwijderEtikettenOuderDan(datum);
-            Console.Write("Datum tijd (druk s om te stoppen):");
-            antwoord = Console.ReadLine();
-            }
-            etikettenServiceClient.StopVerwittigenAlsEtikettenVerwijderdZijn(); 
+                etikettenServiceClient.VerwittigAlsEtikettenVerwijderdZijn();
+                Console.Write("Datum tijd (druk s om te stoppen):");
+                var antwoord = Console.ReadLine();
+                while (antwoord != "s")
+                {
+                    var datum = DateTime.Parse(antwoord);
+                    etikettenServiceClient.VerwijderEtikettenOuderDan(datum);
+                    Console.Write("Datum tijd (druk s om te stoppen):");
+                    antwoord = Console.ReadLine();
+                }
+                etikettenServiceClient.StopVerwittigenAlsEtikettenVerwijderdZijn();
             }
         }
 
         private static void ToonEtikettenScherm()
         {
-            using (var etikettenServiceClient = new EtikettenServiceClient())
-            {
-                Console.Write("Datum tijd:");
-                var datum = DateTime.Parse(Console.ReadLine());
-                etikettenServiceClient.VerwijderEtikettenOuderDan(datum);
-            }
+            //using (var etikettenServiceClient = new EtikettenServiceClient())
+            //{
+            //    Console.Write("Datum tijd:");
+            //    var datum = DateTime.Parse(Console.ReadLine());
+            //    etikettenServiceClient.VerwijderEtikettenOuderDan(datum);
+            //}
         }
 
         private static void ToonBierenScherm()

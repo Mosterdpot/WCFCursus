@@ -4,14 +4,33 @@
     <xsd:schema targetNamespace="http://vdab.be/etikettenservice/Imports">
       <xsd:import namespace="http://vdab.be/etikettenservice" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IEtikettenService_VerwijderEtikettenOuderDan_InputMessage">
     <wsdl:part name="parameters" element="tns:VerwijderEtikettenOuderDan" />
   </wsdl:message>
+  <wsdl:message name="IEtikettenService_VerwittigAlsEtikettenVerwijderdZijn_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerwittigAlsEtikettenVerwijderdZijn" />
+  </wsdl:message>
+  <wsdl:message name="IEtikettenService_StopVerwittigenAlsEtikettenVerwijderdZijn_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopVerwittigenAlsEtikettenVerwijderdZijn" />
+  </wsdl:message>
+  <wsdl:message name="IEtikettenService_EtikettenZijnVerwijderd_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:EtikettenZijnVerwijderd" />
+  </wsdl:message>
   <wsdl:portType name="IEtikettenService">
     <wsdl:operation name="VerwijderEtikettenOuderDan">
       <wsdl:input wsaw:Action="http://vdab.be/etikettenservice/IEtikettenService/VerwijderEtikettenOuderDan" message="tns:IEtikettenService_VerwijderEtikettenOuderDan_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerwittigAlsEtikettenVerwijderdZijn">
+      <wsdl:input wsaw:Action="http://vdab.be/etikettenservice/IEtikettenService/VerwittigAlsEtikettenVerwijderdZijn" message="tns:IEtikettenService_VerwittigAlsEtikettenVerwijderdZijn_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopVerwittigenAlsEtikettenVerwijderdZijn">
+      <wsdl:input wsaw:Action="http://vdab.be/etikettenservice/IEtikettenService/StopVerwittigenAlsEtikettenVerwijderdZijn" message="tns:IEtikettenService_StopVerwittigenAlsEtikettenVerwijderdZijn_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EtikettenZijnVerwijderd">
+      <wsdl:output wsaw:Action="http://vdab.be/etikettenservice/IEtikettenService/EtikettenZijnVerwijderd" message="tns:IEtikettenService_EtikettenZijnVerwijderd_OutputCallbackMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>
