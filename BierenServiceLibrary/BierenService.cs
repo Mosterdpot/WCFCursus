@@ -24,6 +24,8 @@ namespace BierenServiceLibrary
 
         public int GetAantalBierenTussenAlcohol(decimal van, decimal tot)
         {
+            if (van < 0m || tot < 0m)
+                throw new ArgumentException();
             return (from bier in bieren
                     where bier.Alcohol >= van && bier.Alcohol <= tot
                     select bier).Count();

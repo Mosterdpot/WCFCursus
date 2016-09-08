@@ -17,7 +17,8 @@ namespace ConsoleBierenClient
             //ToonRadenScherm();
             //ToonBierenScherm();
             //ToonEtikettenScherm();
-            ToonEtikettenMetCallbackScherm();
+            //ToonEtikettenMetCallbackScherm();
+            ToonBierenMetFountenScherm();
 
         }
 
@@ -78,6 +79,34 @@ namespace ConsoleBierenClient
 
             }
             Console.ReadLine();
+        }
+
+        private static void ToonBierenMetFountenScherm()
+        {
+            var bierenServiceClient = new BierenServiceClient("httpBieren");
+            try
+            {
+                Console.WriteLine("Van Alcohol :");
+                var van = Decimal.Parse(Console.ReadLine());
+                Console.Write("Tot alcohol:");
+                var tot = Decimal.Parse(Console.ReadLine());
+                Console.WriteLine("Aantal bieren: {0}", bierenServiceClient.GetAantalBierenTussenAlcohol(van, tot));
+
+            }
+            catch (FaultException)
+            {
+                Console.WriteLine("Kan bieren niet ophalen");
+            }
+            finally {
+                if (bierenServiceClient.State == CommunicationState.Faulted)
+                {
+                    bierenServiceClient.Abort();
+                }
+                else
+                {
+                    bierenServiceClient.Close();
+                }
+            }
         }
 
         private static void ToonRadenScherm()

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleBierenClient
 {
-    class EtikettenServiceCallBack : IEtikettenServiceCallback
+    public class EtikettenServiceCallBack : IEtikettenServiceCallback
     {
         public void EtikettenZijnVerwijderd(string[] etiketten)
         {
