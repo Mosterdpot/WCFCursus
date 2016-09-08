@@ -38,7 +38,7 @@ namespace BierenServiceLibrary
         public void VerwijderEtikettenOuderDan(DateTime datum)
         {
             var verwijderdebestandsNamen = new List<string>();
-            foreach (var bestandsNaam in Directory.GetFiles(@"c:\etiketten"))
+            foreach (var bestandsNaam in Directory.GetFiles(@"c:\temp\etiketten"))
             {
                 if (File.GetLastWriteTime(bestandsNaam) < datum)
                 {

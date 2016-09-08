@@ -25,7 +25,7 @@ namespace ConsoleBierenClient
         {
             var etikettenServiceCallBack = new EtikettenServiceCallBack();
             using (var etikettenServiceClient = new EtikettenServiceClient(
-            new InstanceContext(etikettenServiceCallBack)))
+                new InstanceContext(etikettenServiceCallBack)))
             {
                 etikettenServiceClient.VerwittigAlsEtikettenVerwijderdZijn();
                 Console.Write("Datum tijd (druk s om te stoppen):");
