@@ -24,8 +24,14 @@ namespace BierenServiceLibrary
 
         public int GetAantalBierenTussenAlcohol(decimal van, decimal tot)
         {
-            if (van < 0m || tot < 0m)
-                throw new ArgumentException();
+            var alcoholFout = new AlcoholFout(); 
+            if (van < 0m)
+                alcoholFout.VerkeerdeParameters.Add("van"); 
+            if (tot < 0m)
+                alcoholFout.VerkeerdeParameters.Add("tot");
+            if (alcoholFout.VerkeerdeParameters.Count != 0)
+                throw new FaultException<AlcoholFout>(alcoholFout, "Enkel alcohol vanaf nul toegelaten"); 
+
             return (from bier in bieren
                     where bier.Alcohol >= van && bier.Alcohol <= tot
                     select bier).Count();

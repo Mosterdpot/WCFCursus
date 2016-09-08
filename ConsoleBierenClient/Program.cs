@@ -83,6 +83,7 @@ namespace ConsoleBierenClient
 
         private static void ToonBierenMetFountenScherm()
         {
+            var nogEenKeer = true;
             var bierenServiceClient = new BierenServiceClient("httpBieren");
             try
             {
@@ -91,11 +92,25 @@ namespace ConsoleBierenClient
                 Console.Write("Tot alcohol:");
                 var tot = Decimal.Parse(Console.ReadLine());
                 Console.WriteLine("Aantal bieren: {0}", bierenServiceClient.GetAantalBierenTussenAlcohol(van, tot));
-
+                nogEenKeer = false;
+            }
+            catch (FaultException<AlcoholFout> ex)
+            {
+                Console.WriteLine(ex.Reason);
+                Console.WriteLine("Verkeerde Invoer :");
+                foreach (var verkeerdeParameter in ex.Detail.VerkeerdeParameters)
+                {
+                    Console.WriteLine(verkeerdeParameter);
+                    Console.WriteLine(' ');
+                }
+                Console.WriteLine();
+                Console.Write("Nog een keer proberen (j/n):");
+                nogEenKeer = Console.ReadLine() == "j";
             }
             catch (FaultException)
             {
                 Console.WriteLine("Kan bieren niet ophalen");
+                nogEenKeer = false;
             }
             finally {
                 if (bierenServiceClient.State == CommunicationState.Faulted)
