@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace BierenServiceLibrary
 {
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall,
+        IncludeExceptionDetailInFaults=true)]
     public class BierenService : IBierenService
     {
         private static Bier[] bieren = 
@@ -24,6 +25,9 @@ namespace BierenServiceLibrary
 
         public int GetAantalBierenTussenAlcohol(decimal van, decimal tot)
         {
+            //gewoon om een exception te triggeren
+            //var ditVeroorzaaktEenNullReferenceException = ((string)(null)).ToUpper();
+
             var alcoholFout = new AlcoholFout(); 
             if (van < 0m)
                 alcoholFout.VerkeerdeParameters.Add("van"); 
