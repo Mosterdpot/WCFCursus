@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b784ee80-10d2-4f4a-aced-8ab74053e7dc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:810/AbonneeService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="abonneeservice.wsdl" MetadataType="Wsdl" ID="a1ffb1d2-6c01-4473-86bc-2a0d32e8a964" SourceId="1" SourceUrl="net.tcp://localhost:810/AbonneeService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="75351160-9b29-4db3-9b72-ada7ff6bb92a" SourceId="1" SourceUrl="net.tcp://localhost:810/AbonneeService/mex" />
+    <MetadataFile FileName="abonneeservice.xsd" MetadataType="Schema" ID="3bce693a-2762-4877-bb08-5587c32d318c" SourceId="1" SourceUrl="net.tcp://localhost:810/AbonneeService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="4987330a-0b88-442b-8c9f-9e389b6bddd3" SourceId="1" SourceUrl="net.tcp://localhost:810/AbonneeService/mex" />
+    <MetadataFile FileName="AbonneeServiceLibrary.xsd" MetadataType="Schema" ID="2a2f675c-1a6e-436f-9111-a82602bec871" SourceId="1" SourceUrl="net.tcp://localhost:810/AbonneeService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

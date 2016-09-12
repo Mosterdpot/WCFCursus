@@ -11,6 +11,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IISBierenServiceHost", "IIS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBierenClient", "ConsoleBierenClient\ConsoleBierenClient.csproj", "{2B1D5576-E6D6-4A0E-8511-26A6923106BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbonneeServiceLibrary", "AbonneeServiceLibrary\AbonneeServiceLibrary.csproj", "{D38D97A4-D0DB-4264-85C8-0EAAA8940513}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbonneesConsoleServiceHost", "AbonneesConsoleServiceHost\AbonneesConsoleServiceHost.csproj", "{0937D678-D594-4C69-A3F0-60D827532B30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAbonneeClient", "ConsoleAbonneeClient\ConsoleAbonneeClient.csproj", "{CD1B4F77-73A9-40DD-9E95-B3C398FC1B20}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D38D97A4-D0DB-4264-85C8-0EAAA8940513} = {D38D97A4-D0DB-4264-85C8-0EAAA8940513}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +42,18 @@ Global
 		{2B1D5576-E6D6-4A0E-8511-26A6923106BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B1D5576-E6D6-4A0E-8511-26A6923106BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B1D5576-E6D6-4A0E-8511-26A6923106BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D38D97A4-D0DB-4264-85C8-0EAAA8940513}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D38D97A4-D0DB-4264-85C8-0EAAA8940513}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D38D97A4-D0DB-4264-85C8-0EAAA8940513}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D38D97A4-D0DB-4264-85C8-0EAAA8940513}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0937D678-D594-4C69-A3F0-60D827532B30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0937D678-D594-4C69-A3F0-60D827532B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0937D678-D594-4C69-A3F0-60D827532B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0937D678-D594-4C69-A3F0-60D827532B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD1B4F77-73A9-40DD-9E95-B3C398FC1B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1B4F77-73A9-40DD-9E95-B3C398FC1B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1B4F77-73A9-40DD-9E95-B3C398FC1B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1B4F77-73A9-40DD-9E95-B3C398FC1B20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

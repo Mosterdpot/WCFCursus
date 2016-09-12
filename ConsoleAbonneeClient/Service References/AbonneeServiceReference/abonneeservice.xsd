@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://vdab.be/abonneeservice" elementFormDefault="qualified" targetNamespace="http://vdab.be/abonneeservice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/AbonneeServiceLibrary" />
+  <xs:element name="VoegPersoonToe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AbonneeServiceLibrary" minOccurs="0" name="persoon" nillable="true" type="q1:Persoon" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
